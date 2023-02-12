@@ -7,6 +7,10 @@ Belgium = 'Belgium,10445852,Brussels,737966,Europe,1830,Euro,Catholicism,Dutch,F
 for e in Belgium:
     print("-", end="")
 print("\n")
+# another option learned from Maia to use range and len()
+for i in range(len(Belgium)):
+    print("-", end="")
+print("\n")
 # Belgium string with commas replaced with colons
 print(Belgium.replace(",", ":"))
 
@@ -17,46 +21,3 @@ print(BelgiumList)
 popBelgium = int(BelgiumList[1])
 popBrussels = int(BelgiumList[3])
 print(popBelgium + popBrussels)
-
-i = 0
-    numList = []
-    operators = ["+", "-", "*", "/"]
-    numSum = 0
-    while i < 2:
-        num = input("Enter a number: ")
-        if num.isdecimal():
-            i += 1
-            numList.append(int(num))
-        else:
-            print("Not a number or accepted operator.")
-            num = input("Enter a number or operator(+, -, *, /): ")
-    while i < 100:
-        num = input("Enter a number or operator (+, -, *, /): ")
-        if num.isdecimal():
-            i += 1
-            numList.append(int(num))
-        elif num in operators:
-            break
-        else:
-            print("Not a number or accepted operator.")
-            num = input("Enter a number or operator(+, -, *, /): ")
-    numSum = numList[0]
-    if num == "+":
-        for i in range(1, i):
-            x = numList[i]
-            numSum += x
-    elif num == "-":
-        for i in range(1, i):
-            x = numList[i]
-            numSum -= x
-    elif num == "*":
-        for i in range(1, i):
-            x = numList[i]
-            numSum = numSum * x
-    elif num == "/":
-        for i in range(1, i):
-            x = numList[i]
-            numSum /= x
-    for i in range(i):
-        print(numList[i], num, end=" ")
-    print(f"{numList[-1]} = {numSum}")
