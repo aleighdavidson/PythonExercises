@@ -16,25 +16,25 @@ while quitQ.upper() != "Q":
         print("Invalid operator.")
         inputOp = (input("Enter an operator (+, -, *, /): "))
     # set the sum to the first number (float) in the list
-    numSum = float(numList[0])
+    result = float(numList[0])
     # if/elif block for each supported operation
     # loops through list from the second number to the end, applying the operator to contribute to the sum/product
     if inputOp == "+":
         for i in range(1, len(numList)):
             x = float(numList[i])
-            numSum += x
+            result += x
     elif inputOp == "-":
         for i in range(1, len(numList)):
             x = float(numList[i])
-            numSum -= x
+            result -= x
     elif inputOp == "*":
         for i in range(1, len(numList)):
             x = float(numList[i])
-            numSum *= x
+            result *= x
     elif inputOp == "/":
         for i in range(1, len(numList)):
             x = float(numList[i])
-            numSum /= x
+            result /= x
     # loop to print each number in the list (as string) followed by the operator with spaces
     # exclude the final number in the list as you don't want the operator to follow it
     for i in range(len(numList)-1):
@@ -42,14 +42,14 @@ while quitQ.upper() != "Q":
     # print the final number in the list and an equal sign
     print(f"{numList[-1]} =", end=" ")
     # several if options to format the answer
-    if 0 < numSum < 0.01:
-        print("{:1.2E}".format(numSum))
-    elif numSum > 1000:
-        print("{:,}".format(numSum))
-    elif numSum - int(numSum) != 0:
-        print("{:3.3f}".format(numSum))
+    if 0 < result < 0.01:
+        print("{:1.2E}".format(result))
+    elif result > 1000:
+        print("{:,}".format(result))
+    elif result - int(result) != 0:
+        print("{:3.3f}".format(result))
     else:
-        print("{:.0f}".format(numSum))
+        print("{:.0f}".format(result))
     # option to quit or continue
     quitQ = input("Press Q to quit. Press any other key to continue. ")
 else:
