@@ -103,7 +103,6 @@ while quitQ.upper() != "Q":
         else:
             # otherwise, ask again
             print("Not a number.")
-            num = input("Enter a number: ")
     # now we have 2 numbers, we are asking for a number or operator
     # could change to while i > 2 but that could be infinite, assuming 100 is well above what anyone would need
     while i >= 2:
@@ -119,7 +118,6 @@ while quitQ.upper() != "Q":
         # otherwise (e.g. a letter or non-operation character was entered), ask again
         else:
             print("Not a number or accepted operator.")
-            num = input("Enter a number or operator (+, -, *, /): ")
     # start the sum/product off with the first number in the list
     result = numList[0]
     # series of if/elif blocks for each operation
