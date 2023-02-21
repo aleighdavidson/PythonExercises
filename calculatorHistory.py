@@ -51,13 +51,16 @@ while menu.upper() != "Q":
     else:
         formatResult = "{:.0f}".format(result)
     # create empty string to hold the equation
-    equation = ""
+    # equation = ""
     # loop to add each number in the list followed by the operator with spaces to an f' string
     # exclude the final number in the list as you don't want the operator to follow it
-    for i in range(i):
-        equation += f'{numList[i]} {inputOp} '
+    # for i in range(i):
+    #     equation += f'{numList[i]} {inputOp} '
     # add the final number in the list and an equal sign
-    equation += f"{numList[-1]} = {formatResult}"
+    # equation += f"{numList[-1]} = {formatResult}"
+    # to avoid looping the string concatenation, just .join
+    # note this doesn't allow me to include the spaces around the operator
+    equation = f'{inputOp.join(numList)} = {formatResult}'
     history[key] = equation
     print(equation)
     # option to quit, view history, or continue
